@@ -6,8 +6,9 @@ class Bear
     @stomach_contents = []
   end
 
-  def catch(fish)
+  def catch(fish, river)
     @stomach_contents << fish
+    river.lose_fish(fish)
   end
 
   def food_count()
